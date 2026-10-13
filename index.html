@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f1e8">
+  <meta name="description" content="Hesed.house — уютные домашние тапочки и текстиль для дома. Новые расцветки и коллекции уже в Telegram.">
+  <meta property="og:title" content="Hesed.house — уют начинается с мелочей">
+  <meta property="og:description" content="Домашние тапочки и текстиль, которые добавляют дому тепла. Смотрите новинки в Telegram.">
+  <meta property="og:type" content="website">
+  <title>Hesed.house — уют начинается с мелочей</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+    :root {
+      --cream: #f7f1e8;
+      --paper: #fffdf9;
+      --ink: #322c27;
+      --muted: #7b7168;
+      --clay: #aa705a;
+      --clay-dark: #895742;
+      --sage: #747d68;
+      --line: #e7ddd0;
+      --shadow: 0 22px 60px rgba(69, 48, 31, .09);
+      --serif: Georgia, 'Times New Roman', serif;
+      --sans: 'Avenir Next', Avenir, 'Segoe UI', Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+    a { color: inherit; }
+    .announcement { padding: 9px 16px; text-align: center; color: #fffaf4; background: var(--sage); font-size: 12px; letter-spacing: .08em; }
+    .announcement a { text-decoration: none; }
+    .site-header { max-width: 1180px; padding: 22px 26px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { text-decoration: none; display: inline-flex; flex-direction: column; gap: 2px; }
+    .brand-name { font-family: var(--serif); font-size: 29px; letter-spacing: -.04em; line-height: 1; }
+    .brand-sub { color: var(--muted); text-transform: uppercase; letter-spacing: .19em; font-size: 9px; margin-left: 2px; }
+    .header-link { color: var(--ink); font-size: 13px; text-decoration: none; padding: 10px 0; border-bottom: 1px solid #bba28e; white-space: nowrap; }
+    .hero { background: var(--cream); position: relative; overflow: hidden; }
+    .hero:before, .hero:after { content: ''; position: absolute; border-radius: 50%; pointer-events: none; }
+    .hero:before { width: 400px; height: 400px; border: 1px solid rgba(170,112,90,.2); top: -190px; right: -100px; }
+    .hero:after { width: 250px; height: 250px; border: 1px solid rgba(116,125,104,.22); bottom: -155px; left: -80px; }
+    .hero-inner { max-width: 1180px; min-height: 510px; padding: 75px 26px 80px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(280px, .75fr); align-items: center; gap: 50px; position: relative; z-index: 1; }
+    .eyebrow { color: var(--clay-dark); text-transform: uppercase; letter-spacing: .19em; font-size: 10px; font-weight: 700; display: flex; align-items: center; gap: 10px; }
+    .eyebrow:before { content: ''; width: 30px; height: 1px; background: var(--clay); }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { font-family: var(--serif); font-weight: 400; letter-spacing: -.045em; line-height: 1.03; font-size: clamp(46px, 6vw, 76px); max-width: 670px; margin: 22px 0 22px; }
+    h1 em { color: var(--clay); font-weight: 400; }
+    .hero-copy { color: #6d6258; font-size: 16px; line-height: 1.85; max-width: 510px; margin-bottom: 29px; }
+    .button { min-height: 54px; padding: 0 24px; border-radius: 3px; display: inline-flex; justify-content: center; align-items: center; gap: 12px; font-size: 13px; font-weight: 650; text-decoration: none; text-align: center; transition: transform .2s ease, background .2s ease; }
+    .button:hover { transform: translateY(-2px); }
+    .button-primary { background: var(--clay); color: white; box-shadow: 0 9px 20px rgba(170,112,90,.17); }
+    .button-primary:hover { background: var(--clay-dark); }
+    .button-arrow { font-size: 19px; line-height: 1; }
+    .hero-note { margin-top: 23px; color: var(--muted); font-family: var(--serif); font-style: italic; font-size: 15px; }
+    .hero-art { position: relative; display: flex; align-items: center; justify-content: center; min-height: 330px; }
+    .hero-art-frame { width: min(100%, 340px); aspect-ratio: .82; padding: 12px; border: 1px solid rgba(170,112,90,.45); transform: rotate(2deg); position: relative; }
+    .hero-art-frame:before { content: ''; position: absolute; inset: 12px; background: #e9dfd2; }
+    .hero-art img { position: relative; display: block; width: 100%; height: 100%; object-fit: contain; z-index: 1; }
+    .floating-note { position: absolute; z-index: 2; left: -10px; bottom: 28px; background: var(--paper); padding: 15px 18px; box-shadow: var(--shadow); transform: rotate(-3deg); }
+    .floating-note strong { display: block; font-family: var(--serif); font-size: 17px; font-weight: 400; }
+    .floating-note span { display: block; margin-top: 4px; color: var(--muted); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; }
+    .qualities { max-width: 1180px; margin: auto; padding: 21px 26px; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 13px 38px; color: #776b60; border-bottom: 1px solid var(--line); font-size: 12px; }
+    .quality { display: flex; align-items: center; gap: 9px; }
+    .quality-mark { width: 6px; height: 6px; border-radius: 50%; background: var(--sage); }
+    .section { max-width: 1180px; margin: 0 auto; padding: 88px 26px; }
+    .section-heading { text-align: center; max-width: 660px; margin: 0 auto 35px; }
+    .section-heading .eyebrow { justify-content: center; }
+    h2 { font-family: var(--serif); font-size: clamp(36px, 4.5vw, 52px); line-height: 1.1; font-weight: 400; letter-spacing: -.035em; margin: 16px 0 12px; }
+    .section-heading p { color: var(--muted); font-size: 14px; line-height: 1.8; margin-bottom: 0; }
+    .carousel { max-width: 920px; margin: 0 auto; }
+    .carousel-window { position: relative; overflow: hidden; border-radius: 5px; background: #eee7de; box-shadow: var(--shadow); touch-action: pan-y; }
+    .slides { display: flex; transition: transform .42s cubic-bezier(.22,.61,.36,1); will-change: transform; }
+    .slide { min-width: 100%; display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, .72fr); min-height: 470px; background: #eee7de; }
+    .slide-image-wrap { min-height: 470px; background: #e6ded4; display: flex; align-items: center; justify-content: center; padding: 16px; }
+    .slide-image { display: block; max-width: 100%; max-height: 540px; width: 100%; height: 100%; object-fit: contain; }
+    .slide-caption { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: 36px 35px; background: var(--paper); }
+    .slide-number { color: var(--clay); font-size: 10px; letter-spacing: .18em; text-transform: uppercase; }
+    .slide-caption h3 { font-family: var(--serif); font-weight: 400; font-size: 32px; line-height: 1.15; margin: 17px 0 12px; letter-spacing: -.025em; }
+    .slide-caption p { color: var(--muted); font-size: 13px; line-height: 1.8; margin-bottom: 0; }
+    .carousel-controls { display: flex; align-items: center; justify-content: space-between; padding: 18px 2px 0; }
+    .carousel-arrows { display: flex; gap: 9px; }
+    .circle-control { width: 43px; height: 43px; border-radius: 50%; border: 1px solid #d8c8b9; background: transparent; color: var(--ink); font-size: 20px; cursor: pointer; transition: background .2s, color .2s; }
+    .circle-control:hover { background: var(--ink); color: white; }
+    .dots { display: flex; gap: 8px; align-items: center; }
+    .dot { width: 7px; height: 7px; border: 0; border-radius: 50%; background: #d8ccc0; padding: 0; cursor: pointer; }
+    .dot[aria-current="true"] { background: var(--clay); width: 23px; border-radius: 10px; }
+    .carousel-cta { text-align: center; padding-top: 31px; }
+    .small-note { font-size: 11px; color: var(--muted); margin-top: 13px; }
+    .story-section { background: #f1ebe2; }
+    .story-inner { max-width: 890px; padding: 76px 26px 80px; margin: auto; text-align: center; }
+    .story-icon { width: 47px; height: 47px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; background: #fffaf4; font-size: 22px; margin-bottom: 12px; }
+    .story-inner h2 { font-size: clamp(34px, 4.4vw, 48px); }
+    .story-inner p { color: #71665c; font-size: 15px; line-height: 1.95; max-width: 670px; margin: 15px auto 25px; }
+    .final-cta { background: #6e7864; color: #fffaf3; padding: 70px 26px; text-align: center; position: relative; overflow: hidden; }
+    .final-cta:before { content: ''; width: 300px; height: 300px; position: absolute; border: 1px solid rgba(255,250,243,.18); border-radius: 50%; left: -130px; top: -160px; }
+    .final-cta .eyebrow { color: #e8dac8; justify-content: center; }
+    .final-cta .eyebrow:before { background: #d7bda8; }
+    .final-cta h2 { max-width: 680px; margin: 17px auto 13px; }
+    .final-cta p { max-width: 520px; margin: 0 auto 25px; color: #e8e4da; font-size: 14px; line-height: 1.8; }
+    .final-cta .button-primary { color: var(--ink); background: #fffaf3; box-shadow: none; }
+    .final-cta .button-primary:hover { background: white; }
+    footer { max-width: 1180px; margin: auto; padding: 25px 26px 32px; display: flex; gap: 18px; justify-content: space-between; align-items: center; color: var(--muted); font-size: 11px; }
+    .footer-brand { font-family: var(--serif); color: var(--ink); font-size: 19px; }
+    .footer-link { text-decoration: none; border-bottom: 1px solid #d4c5b7; padding-bottom: 3px; }
+    @media (max-width: 760px) {
+      .site-header { padding: 18px 20px; }
+      .brand-name { font-size: 26px; }
+      .header-link { font-size: 11px; }
+      .hero-inner { display: flex; flex-direction: column; align-items: stretch; gap: 32px; padding: 55px 22px 48px; min-height: 0; }
+      h1 { font-size: clamp(45px, 12vw, 64px); margin-top: 17px; }
+      .hero-copy { font-size: 14px; line-height: 1.8; }
+      .hero-art { min-height: 260px; margin-top: 2px; }
+      .hero-art-frame { width: 230px; aspect-ratio: .83; }
+      .floating-note { left: calc(50% - 145px); bottom: 20px; }
+      .qualities { padding: 19px 20px; gap: 13px 20px; font-size: 11px; }
+      .section { padding: 65px 18px; }
+      .section-heading { margin-bottom: 27px; }
+      .slide { display: flex; flex-direction: column; min-height: 0; }
+      .slide-image-wrap { min-height: 0; height: min(112vw, 480px); padding: 10px; }
+      .slide-image { max-height: 100%; width: 100%; height: 100%; }
+      .slide-caption { padding: 22px 23px 25px; min-height: 155px; }
+      .slide-caption h3 { font-size: 29px; margin: 11px 0 7px; }
+      .carousel-controls { padding-top: 14px; }
+      .story-inner { padding: 60px 22px; }
+      .story-inner p { font-size: 14px; }
+      .final-cta { padding: 60px 22px; }
+      footer { padding: 23px 20px 29px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *:before, *:after { transition-duration: .01ms !important; animation-duration: .01ms !important; } }
+  </style>
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1015625544384062');
+    fbq('track', 'PageView');
+  </script>
+  <!-- End Meta Pixel Code -->
+</head>
+<body>
+  <div class="announcement"><a href="https://t.me/+ufB0tSRad39mMjgy" target="_blank" rel="noopener noreferrer" data-placement="top-bar">Новые расцветки уже в Telegram <span aria-hidden="true">↗</span></a></div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Hesed.house — на главную">
+      <span class="brand-name">hesed.house</span>
+      <span class="brand-sub">текстиль с теплом</span>
+    </a>
+    <a class="header-link" href="https://t.me/+ufB0tSRad39mMjgy" target="_blank" rel="noopener noreferrer" data-placement="header">Наш Telegram <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <div class="eyebrow">Текстиль для домашнего уюта</div>
+          <h1>Дом начинается<br>с <em>мелочей.</em></h1>
+          <p class="hero-copy">Тёплые тапочки, красивые расцветки и текстиль для маленьких домашних ритуалов. Создаём вещи, которые делают привычные моменты немного уютнее.</p>
+          <a class="button button-primary" href="https://t.me/+ufB0tSRad39mMjgy" target="_blank" rel="noopener noreferrer" data-placement="hero">Открыть каталог в Telegram <span class="button-arrow" aria-hidden="true">↗</span></a>
+          <div class="hero-note">С любовью к дому — в каждой детали.</div>
+        </div>
+        <div class="hero-art" aria-label="Продукция Hesed.house">
+          <div class="hero-art-frame"><img src="assets/tea-set-grapes.jpg" alt="Текстильный комплект с виноградным принтом" fetchpriority="high"></div>
+          <div class="floating-note"><strong>Немного больше уюта</strong><span>Коллекция Hesed.house</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="qualities" aria-label="Особенности Hesed.house">
+      <div class="quality"><span class="quality-mark"></span> Текстиль для дома</div>
+      <div class="quality"><span class="quality-mark"></span> Уютные расцветки</div>
+      <div class="quality"><span class="quality-mark"></span> Идеи для подарков</div>
+    </div>
+
+    <section class="section" id="collection">
+      <div class="section-heading">
+        <div class="eyebrow">Коллекция Hesed.house</div>
+        <h2>Мелочи, которые<br>создают настроение</h2>
+        <p>Листайте фотографии, присматривайте любимые расцветки и заглядывайте в Telegram — там публикуем новинки и доступные модели.</p>
+      </div>
+      <div class="carousel" aria-roledescription="carousel" aria-label="Фотографии продукции Hesed.house">
+        <div class="carousel-window" id="carouselWindow">
+          <div class="slides" id="slides">
+            <article class="slide" aria-label="1 из 5">
+              <div class="slide-image-wrap"><img class="slide-image" src="assets/slippers-black-white.jpg" alt="Домашние тапочки с чёрно-белым орнаментом" loading="lazy"></div>
+              <div class="slide-caption"><span class="slide-number">01 / Домашний уют</span><h3>Тапочки для тёплых вечеров</h3><p>Уют начинается с простых вещей — даже с любимой пары тапочек.</p></div>
+            </article>
+            <article class="slide" aria-label="2 из 5">
+              <div class="slide-image-wrap"><img class="slide-image" src="assets/slippers-blue.jpg" alt="Домашние тапочки с синим кантом и узорчатой тканью" loading="lazy"></div>
+              <div class="slide-caption"><span class="slide-number">02 / Любимые детали</span><h3>Цвет и характер</h3><p>Выбирайте расцветку, которая подходит именно вашему дому и настроению.</p></div>
+            </article>
+            <article class="slide" aria-label="3 из 5">
+              <div class="slide-image-wrap"><img class="slide-image" src="assets/tea-set-grapes.jpg" alt="Чайный текстильный комплект с принтом винограда" loading="lazy"></div>
+              <div class="slide-caption"><span class="slide-number">03 / Чайная пауза</span><h3>Для красивой сервировки</h3><p>Текстильные детали для уютного чаепития и тёплых разговоров с близкими.</p></div>
+            </article>
+            <article class="slide" aria-label="4 из 5">
+              <div class="slide-image-wrap"><img class="slide-image" src="assets/shopper-pattern.jpg" alt="Тканевый шопер с орнаментом в синих и песочных оттенках" loading="lazy"></div>
+              <div class="slide-caption"><span class="slide-number">04 / Каждый день</span><h3>Шопер с настроением</h3><p>Практичная вещь, которая добавляет индивидуальности даже обычным делам.</p></div>
+            </article>
+            <article class="slide" aria-label="5 из 5">
+              <div class="slide-image-wrap"><img class="slide-image" src="assets/ironing-board-cover.jpg" alt="Чехол для гладильной доски с цветочным принтом" loading="lazy"></div>
+              <div class="slide-caption"><span class="slide-number">05 / Красота в мелочах</span><h3>Даже для домашних дел</h3><p>Любимые принты способны сделать привычные домашние заботы приятнее.</p></div>
+            </article>
+          </div>
+        </div>
+        <div class="carousel-controls">
+          <div class="carousel-arrows"><button class="circle-control" type="button" id="prevSlide" aria-label="Предыдущий товар">‹</button><button class="circle-control" type="button" id="nextSlide" aria-label="Следующий товар">›</button></div>
+          <div class="dots" id="dots" aria-label="Выбрать фотографию">
+            <button class="dot" type="button" aria-label="Фотография 1" aria-current="true" data-index="0"></button>
+            <button class="dot" type="button" aria-label="Фотография 2" aria-current="false" data-index="1"></button>
+            <button class="dot" type="button" aria-label="Фотография 3" aria-current="false" data-index="2"></button>
+            <button class="dot" type="button" aria-label="Фотография 4" aria-current="false" data-index="3"></button>
+            <button class="dot" type="button" aria-label="Фотография 5" aria-current="false" data-index="4"></button>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-cta">
+        <a class="button button-primary" href="https://t.me/+ufB0tSRad39mMjgy" target="_blank" rel="noopener noreferrer" data-placement="after-carousel">Смотреть новинки в Telegram <span class="button-arrow" aria-hidden="true">↗</span></a>
+        <p class="small-note">Расцветки и наличие публикуем в канале.</p>
+      </div>
+    </section>
+
+    <section class="story-section">
+      <div class="story-inner">
+        <div class="story-icon" aria-hidden="true">☕</div>
+        <div class="eyebrow" style="justify-content:center">Немного о нашей идее</div>
+        <h2>Дом начинается с мелочей…</h2>
+        <p>Мы подготовили новые расцветки чайных комплектов — для уютных вечеров, красивой сервировки и тёплых моментов с близкими 🤍 Каждый комплект создан, чтобы добавить в дом больше уюта и красоты ✨</p>
+        <a class="button button-primary" href="https://t.me/+ufB0tSRad39mMjgy" target="_blank" rel="noopener noreferrer" data-placement="after-description">Выбрать любимую расцветку <span class="button-arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="eyebrow">Будьте ближе к новинкам</div>
+      <h2>Пусть дома будет<br>чуть больше тепла.</h2>
+      <p>Подписывайтесь на Hesed.house в Telegram, чтобы первыми видеть новые модели, расцветки и то, что сейчас доступно.</p>
+      <a class="button button-primary" href="https://t.me/+ufB0tSRad39mMjgy" target="_blank" rel="noopener noreferrer" data-placement="final">Подписаться на Telegram <span class="button-arrow" aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <footer>
+    <span class="footer-brand">hesed.house</span>
+    <span>Уют начинается с мелочей.</span>
+    <a class="footer-link" href="https://t.me/+ufB0tSRad39mMjgy" target="_blank" rel="noopener noreferrer" data-placement="footer">Telegram ↗</a>
+  </footer>
+
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1015625544384062&ev=PageView&noscript=1" alt=""></noscript>
+  <script>
+    (function () {
+      const slides = document.getElementById('slides');
+      const dots = Array.from(document.querySelectorAll('.dot'));
+      const slideEls = Array.from(document.querySelectorAll('.slide'));
+      const carouselWindow = document.getElementById('carouselWindow');
+      let active = 0;
+      let startX = null;
+      function showSlide(index) {
+        active = (index + slideEls.length) % slideEls.length;
+        slides.style.transform = `translateX(-${active * 100}%)`;
+        dots.forEach((dot, i) => dot.setAttribute('aria-current', String(i === active)));
+        slideEls.forEach((slide, i) => slide.setAttribute('aria-hidden', String(i !== active)));
+      }
+      document.getElementById('prevSlide').addEventListener('click', () => showSlide(active - 1));
+      document.getElementById('nextSlide').addEventListener('click', () => showSlide(active + 1));
+      dots.forEach(dot => dot.addEventListener('click', () => showSlide(Number(dot.dataset.index))));
+      carouselWindow.addEventListener('touchstart', event => { startX = event.changedTouches[0].screenX; }, { passive: true });
+      carouselWindow.addEventListener('touchend', event => {
+        if (startX === null) return;
+        const distance = event.changedTouches[0].screenX - startX;
+        if (Math.abs(distance) > 45) showSlide(active + (distance < 0 ? 1 : -1));
+        startX = null;
+      }, { passive: true });
+      showSlide(0);
+
+      document.querySelectorAll('a[data-placement]').forEach(link => {
+        link.addEventListener('click', function () {
+          if (typeof window.fbq === 'function') {
+            window.fbq('trackCustom', 'TelegramClick', { placement: this.dataset.placement });
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
