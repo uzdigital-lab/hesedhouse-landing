@@ -102,6 +102,25 @@
     footer { max-width: 1180px; margin: auto; padding: 25px 26px 32px; display: flex; gap: 18px; justify-content: space-between; align-items: center; color: var(--muted); font-size: 11px; }
     .footer-brand { font-family: var(--serif); color: var(--ink); font-size: 19px; }
     .footer-link { text-decoration: none; border-bottom: 1px solid #d4c5b7; padding-bottom: 3px; }
+    .popular-products { max-width: 1180px; margin: 0 auto; padding: 64px 26px 34px; }
+    .popular-products-head { display:flex; justify-content:space-between; align-items:end; gap:18px; margin-bottom:22px; }
+    .popular-products h2 { font-size: clamp(30px, 4vw, 42px); margin: 10px 0 0; }
+    .catalog-link { color:var(--clay-dark); font-size:12px; text-decoration:none; border-bottom:1px solid #c6a18d; padding-bottom:4px; white-space:nowrap; }
+    .product-grid { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:14px; }
+    .product-card { min-width:0; overflow:hidden; border-radius:12px; background:#f2ebe1; }
+    .product-card img { display:block; width:100%; aspect-ratio: .9; object-fit:cover; background:#eee5d9; }
+    .product-card-body { padding:14px 13px 16px; }
+    .product-card h3 { font-family:var(--serif); font-size:17px; font-weight:400; line-height:1.3; min-height:44px; margin:0 0 10px; }
+    .product-card a { color:var(--clay-dark); font-size:13px; font-weight:700; text-decoration:none; display:inline-flex; align-items:center; gap:9px; }
+    .product-card a span { display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:50%; background:#eadfd3; font-size:18px; }
+    @media (max-width: 760px) {
+      .popular-products { padding:44px 18px 22px; }
+      .popular-products-head { align-items:flex-start; }
+      .popular-products h2 { font-size:31px; }
+      .product-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+      .product-card h3 { font-size:16px; min-height:0; }
+      .product-card img { aspect-ratio:1 / 1; }
+    }
     @media (max-width: 760px) {
       .site-header { padding: 18px 20px; }
       .brand-name { font-size: 26px; }
@@ -161,7 +180,7 @@
           <div class="hero-note">С любовью к дому — в каждой детали.</div>
         </div>
         <div class="hero-art" aria-label="Продукция Hesed.house">
-          <div class="hero-art-frame"><img src="assets/tea-set-grapes.jpg" alt="Текстильный комплект с виноградным принтом" fetchpriority="high"></div>
+          <div class="hero-art-frame"><img src="assets/hero-slippers.jpg" alt="Домашние тапочки с бордовым кантом и цветочным принтом" fetchpriority="high"></div>
           <div class="floating-note"><strong>Немного больше уюта</strong><span>Коллекция Hesed.house</span></div>
         </div>
       </div>
@@ -172,6 +191,20 @@
       <div class="quality"><span class="quality-mark"></span> Уютные расцветки</div>
       <div class="quality"><span class="quality-mark"></span> Идеи для подарков</div>
     </div>
+
+    <section class="popular-products" aria-labelledby="popular-title">
+      <div class="popular-products-head">
+        <div><div class="eyebrow">Hesed.house</div><h2 id="popular-title">Популярные товары</h2></div>
+        <a class="catalog-link" href="https://t.me/+ufB0tSRad39mMjgy" target="_blank" rel="noopener noreferrer" data-placement="popular-all">Смотреть все товары ↗</a>
+      </div>
+      <div class="product-grid">
+        <article class="product-card"><img src="assets/hero-slippers.jpg" alt="Домашние тапочки с бордовым кантом" loading="lazy"><div class="product-card-body"><h3>Тапочки домашние</h3><a href="https://t.me/+ufB0tSRad39mMjgy" target="_blank" rel="noopener noreferrer" data-placement="popular-slippers">Смотреть <span>→</span></a></div></article>
+        <article class="product-card"><img src="assets/tea-set-grapes.jpg" alt="Чайный комплект с принтом винограда" loading="lazy"><div class="product-card-body"><h3>Чайный комплект</h3><a href="https://t.me/+ufB0tSRad39mMjgy" target="_blank" rel="noopener noreferrer" data-placement="popular-tea">Смотреть <span>→</span></a></div></article>
+        <article class="product-card"><img src="assets/ironing-board-cover.jpg" alt="Чехол для гладильной доски" loading="lazy"><div class="product-card-body"><h3>Чехол для гладильной доски</h3><a href="https://t.me/+ufB0tSRad39mMjgy" target="_blank" rel="noopener noreferrer" data-placement="popular-cover">Смотреть <span>→</span></a></div></article>
+        <article class="product-card"><img src="assets/slippers-blue.jpg" alt="Тапочки с синим кантом" loading="lazy"><div class="product-card-body"><h3>Тапочки с синим кантом</h3><a href="https://t.me/+ufB0tSRad39mMjgy" target="_blank" rel="noopener noreferrer" data-placement="popular-blue">Смотреть <span>→</span></a></div></article>
+        <article class="product-card"><img src="assets/shopper-pattern.jpg" alt="Тканевый шопер с узором" loading="lazy"><div class="product-card-body"><h3>Шопер</h3><a href="https://t.me/+ufB0tSRad39mMjgy" target="_blank" rel="noopener noreferrer" data-placement="popular-shopper">Смотреть <span>→</span></a></div></article>
+      </div>
+    </section>
 
     <section class="section" id="collection">
       <div class="section-heading">
@@ -271,6 +304,17 @@
         startX = null;
       }, { passive: true });
       showSlide(0);
+      let autoplay = setInterval(() => showSlide(active + 1), 4000);
+      function restartAutoplay() {
+        clearInterval(autoplay);
+        autoplay = setInterval(() => showSlide(active + 1), 4000);
+      }
+      [carouselWindow, document.getElementById('prevSlide'), document.getElementById('nextSlide'), ...dots].forEach(el => {
+        el.addEventListener('mouseenter', () => clearInterval(autoplay));
+        el.addEventListener('mouseleave', restartAutoplay);
+        el.addEventListener('focus', () => clearInterval(autoplay));
+        el.addEventListener('blur', restartAutoplay);
+      });
 
       document.querySelectorAll('a[data-placement]').forEach(link => {
         link.addEventListener('click', function () {
@@ -283,3 +327,4 @@
   </script>
 </body>
 </html>
+
